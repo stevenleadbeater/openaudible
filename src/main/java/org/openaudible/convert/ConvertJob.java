@@ -149,6 +149,9 @@ public class ConvertJob implements IQueueJob, LineListener {
 			throw new IOException("Invalid qscale:" + mp3Qscale);
 		
 		args.add("" + mp3Qscale);
+
+		args.add("-ar");
+		args.add("44100");
 		
 		args.add(temp.getAbsolutePath());
 		

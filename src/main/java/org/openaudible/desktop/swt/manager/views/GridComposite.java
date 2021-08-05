@@ -27,6 +27,8 @@ public class GridComposite extends Composite {
 	
 	public GridComposite(Composite parent, int style) {
 		super(parent, style);
+		bgColor = Display.getCurrent().getSystemColor(SWT.DM_FILL_BACKGROUND);
+		this.setBackground(bgColor);
 		if (parent instanceof GridComposite) {
 			GridComposite gcp = (GridComposite) parent;
 			if (gcp.selectionListener != null)
